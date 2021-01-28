@@ -113,5 +113,43 @@ header{
             }
          }
    }
-
 }
+
+
+/*section 3*/
+
+#restaurant{
+   background-color:#F2F2F2 ;
+   h1{
+      margin-left: 15px;
+   }
+   .restaurants{
+      @include flex_center;
+   }
+}
+
+#restaurant{
+   .figure{
+      height: 253px;
+      background-color: white;
+      .figure__image{
+         position: relative;
+         img{
+            width: 337px;
+            height: 176px;
+            border-radius: 20px 20px 0px 0px;
+            }
+         .new{
+            position: absolute;
+            top: -4px;
+            right: 12px;
+            background-color: #99e2d0;
+            color: #008766;
+            padding: 5px;
+            border-radius: 1px;
+            font-weight: bold;
+            font-size: 12px;
+         }
+      } 
+   }
+}  
