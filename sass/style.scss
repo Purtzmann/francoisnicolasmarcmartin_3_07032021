@@ -1,0 +1,117 @@
+@import "utils/variables.scss";
+@import "utils/mixins.scss";
+@import "base/police.scss";
+
+p, h1, h2, h3{
+   font-family: 'Roboto';
+}
+
+body{
+   max-width: 375px;
+   margin: auto;
+}
+
+header{
+   @include flex_center;
+   background-color: white;
+   height: 63px;
+   .logo{
+      margin-top: 10px;
+      img{
+         width: 166px;
+         height: 31px;
+      }
+   }         
+}
+
+/*section 1*/
+
+#information{
+   background-color: #f6f6f6;
+   @include flex_center;
+   padding-bottom: 10px;
+  
+   .information__geoloc{
+      background-color: #eaeaea;
+      box-shadow: 0px 3px 5px -3px rgb(0 0 0 / 75%) inset;
+      width: 100%;
+      text-align: center;
+      color: #353535;
+      font-weight: 500;
+      i{
+         margin-right: 18px;
+      }
+   }
+
+   .information__info{
+      text-align: center;
+      h1{
+         padding-left: 65px;
+         padding-right: 65px;
+         margin-bottom: 21px;
+      }
+      p{
+         padding-left: 40px;
+         padding-right: 40px;
+         color: #9B9B9B;
+         margin-bottom: 29px;
+      }
+      .btn{
+         @include btn;
+         margin-bottom: 56px;
+      }
+   }
+
+}
+
+/*section 2*/
+
+#working{
+   margin-top: 40px;
+   h2{
+      margin-left: 15px;
+      margin-bottom: 15px;
+   }
+   .working__list{
+      @include flex_center;
+      padding-top: 15px;
+      padding-bottom: 15px;
+         ul{
+            list-style-type: none;
+            padding: 0px 0px 0px 5px;
+            width: 80%;
+            .list{
+               padding: 10px;
+               background-color: #F6F6F6;
+               box-shadow: 1px -1px 19px -1px rgba(0,0,0,0.20);
+               border-radius: 25px;
+               margin-bottom: 15px;
+               p{
+                  position: relative;
+                  left: -22px;
+                  font-weight: 700;
+                  span{
+                     background-color: $primary-color;
+                     border-radius: 50%;
+                     padding: 4px 9px 4px 9px;
+                     margin-right: 10px;
+                     color: white;
+                     font-size: 14px;
+                  }
+                  .fas{
+                     margin-right: 10px;
+                     color: #7E7E7E;
+                  }
+               }
+            }
+            .list--violet{
+               background-color: #F5EDFF;
+               .fas.fa-store{
+                  color: $primary-color;
+                  content: text;
+               }
+            }
+         }
+   }
+
+}
