@@ -1,12 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-p, h1, h2, h3 {
-  font-family: "Roboto";
+footer {
+  padding: 15px;
+  background-color: #353535;
 }
-
-body {
-  max-width: 375px;
-  margin: auto;
+footer h2 {
+  font-family: "Shrikhand";
+  color: white;
+  margin-left: 10px;
+  font-weight: 100;
+}
+footer p {
+  color: white;
+  margin-left: 10px;
 }
 
 header {
@@ -25,6 +31,21 @@ header .logo img {
   height: 31px;
 }
 
+p, h1, h2, h3 {
+  font-family: "Roboto";
+}
+
+body {
+  max-width: 375px;
+  margin: auto;
+}
+
+.links {
+  text-decoration: none;
+  color: black;
+}
+
+/*Home_Page*/
 /*section 1*/
 #information {
   background-color: #f6f6f6;
@@ -127,8 +148,10 @@ header .logo img {
 /*section 3*/
 #restaurant {
   background-color: #F2F2F2;
+  padding-top: 25px;
+  padding-bottom: 40px;
 }
-#restaurant h1 {
+#restaurant h2 {
   margin-left: 15px;
 }
 #restaurant .restaurants {
@@ -141,6 +164,8 @@ header .logo img {
 #restaurant .figure {
   height: 253px;
   background-color: white;
+  border-radius: 25px;
+  margin-bottom: 15px;
 }
 #restaurant .figure .figure__image {
   position: relative;
@@ -161,5 +186,38 @@ header .logo img {
   font-weight: bold;
   font-size: 12px;
 }
+#restaurant .figure .figure__figcaption {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+#restaurant .figure .figure__figcaption .description {
+  width: 75%;
+  line-height: 5px;
+  margin-left: 10px;
+}
+#restaurant .figure .figure__figcaption .favoris p {
+  display: block;
+  cursor: pointer;
+}
+#restaurant .figure .figure__figcaption .favoris p .far {
+  position: absolute;
+  right: 12px;
+  z-index: 1;
+  background-color: white;
+}
+#restaurant .figure .figure__figcaption .favoris p .fas {
+  position: absolute;
+  right: 12px;
+  color: pink;
+}
+#restaurant .figure .figure__figcaption .favoris p .far:active {
+  z-index: -1;
+}
+#restaurant .figure--old .new {
+  display: none;
+}
+
+/*Page_1*/
 
 /*# sourceMappingURL=style.css.map */

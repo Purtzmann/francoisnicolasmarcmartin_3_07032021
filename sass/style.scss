@@ -1,6 +1,8 @@
 @import "utils/variables.scss";
 @import "utils/mixins.scss";
 @import "base/police.scss";
+@import "layouts/footer.scss";
+@import "layouts/header.scss";
 
 p, h1, h2, h3{
    font-family: 'Roboto';
@@ -11,18 +13,12 @@ body{
    margin: auto;
 }
 
-header{
-   @include flex_center;
-   background-color: white;
-   height: 63px;
-   .logo{
-      margin-top: 10px;
-      img{
-         width: 166px;
-         height: 31px;
-      }
-   }         
+.links{
+   text-decoration: none;
+   color: black;
 }
+
+/*Home_Page*/
 
 /*section 1*/
 
@@ -119,8 +115,10 @@ header{
 /*section 3*/
 
 #restaurant{
-   background-color:#F2F2F2 ;
-   h1{
+   background-color:#F2F2F2;
+   padding-top: 25px;
+   padding-bottom: 40px;
+   h2{
       margin-left: 15px;
    }
    .restaurants{
@@ -132,6 +130,8 @@ header{
    .figure{
       height: 253px;
       background-color: white;
+      border-radius: 25px;
+      margin-bottom: 15px;
       .figure__image{
          position: relative;
          img{
@@ -150,6 +150,44 @@ header{
             font-weight: bold;
             font-size: 12px;
          }
-      } 
+      }
+      .figure__figcaption{
+         display: flex;
+         flex-direction: row;
+         position: relative;
+         .description{
+            width: 75%;
+            line-height: 5px;
+            margin-left: 10px;
+         }
+         .favoris{
+            p{
+               display: block;
+               cursor:  pointer;
+               .far{
+                  position: absolute;
+                  right: 12px;
+                  z-index: 1;
+                  background-color: white;
+               }
+               .fas{
+                  position: absolute;
+                  right: 12px;
+                  color: pink;
+               }
+               .far:active{
+                  z-index: -1;
+               }
+            }
+         }
+      }
    }
-}  
+   .figure--old{
+      .new{
+         display: none;
+      }
+   }
+} 
+
+
+/*Page_1*/

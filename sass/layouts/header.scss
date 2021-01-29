@@ -1,0 +1,12 @@
+header{
+   @include flex_center;
+   background-color: white;
+   height: 63px;
+   .logo{
+      margin-top: 10px;
+      img{
+         width: 166px;
+         height: 31px;
+      }
+   }         
+}
