@@ -1,5 +1,10 @@
 header{
-   @include flex_center;
+   display: flex;
+   flex-direction: row-reverse;
+   align-items: center;
+   justify-content: center;
+   background-color: white;
+   height: 63px;
    background-color: white;
    height: 63px;
    .logo{
@@ -8,5 +13,15 @@ header{
          width: 166px;
          height: 31px;
       }
-   }         
+   }
+   .arrow{
+      margin-left: -17%;
+      margin-right: 14%;
+      margin-top: 2%;
+      font-size: 18px;
+      
+      .fas.fa-arrow-left{
+         color: #353535;
+      }
+   }      
 }

@@ -3,6 +3,7 @@
 @import "base/police.scss";
 @import "layouts/footer.scss";
 @import "layouts/header.scss";
+@import "utils/keyframes.scss";
 
 p, h1, h2, h3{
    font-family: 'Roboto';
@@ -19,6 +20,12 @@ body{
 }
 
 /*Home_Page*/
+
+header{
+   .arrow{
+      display: none;
+   }
+}
 
 /*section 1*/
 
@@ -191,3 +198,96 @@ body{
 
 
 /*Page_1*/
+
+
+
+.img_resto{
+   position: relative;
+   img{
+      width: 375px;
+      height: 253px;
+   }
+}
+
+
+main{
+   border-radius: 38px 38px 0px 0px;
+   position: relative;
+   top: -86px;
+   background-color: #F6F6F6;
+   padding-right: 14px;
+   padding-left: 14px;
+   padding-bottom: 54px;
+   margin-bottom: -85px;
+   h1{
+      font-family: 'Shrikhand';
+      font-weight: 100;
+      padding-top: 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+}
+
+.bloc{
+   margin-bottom: 20px;
+   h2{
+      color: #353535;
+      font-size: 1rem;
+      font-weight: 400;
+      border-bottom: 3px solid #99e2d0;
+      width: 11%;
+   }
+}
+
+.list{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   
+   .list__plat{
+      background-color: white;
+      margin-bottom: 15px;
+      width: 100%;
+      border-radius: 15px;
+      padding-right:5px ;
+      padding-left: 5px;
+      box-shadow: 0px 1px 6px lightgrey;
+      .titre{
+         padding-left: 10px;
+         font-weight: 700;
+         font-size: 1.1rem;
+         margin-top: 5px;
+      }
+      .details{
+         margin-top: -26px;
+         margin-bottom: -8px;
+         padding-left: 10px;
+         padding-right: 10px;
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         P{
+            color: #353535;
+         }
+         .prix{
+            font-weight: 700;
+         }
+      }
+   }
+   .list__animation{
+      background-color: green;
+      width: 0%;
+      height: 25px;
+      }
+}
+
+.commander{
+
+   .btn{
+      @include btn;
+      width: 60%;
+      font-size: 1rem;
+   }
+}

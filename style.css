@@ -17,9 +17,11 @@ footer p {
 
 header {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row-reverse;
   align-items: center;
+  justify-content: center;
+  background-color: white;
+  height: 63px;
   background-color: white;
   height: 63px;
 }
@@ -30,7 +32,24 @@ header .logo img {
   width: 166px;
   height: 31px;
 }
+header .arrow {
+  margin-left: -17%;
+  margin-right: 14%;
+  margin-top: 2%;
+  font-size: 18px;
+}
+header .arrow .fas.fa-arrow-left {
+  color: #353535;
+}
 
+@keyframes box {
+  from {
+    transform: translateX(72px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
 p, h1, h2, h3 {
   font-family: "Roboto";
 }
@@ -46,6 +65,10 @@ body {
 }
 
 /*Home_Page*/
+header .arrow {
+  display: none;
+}
+
 /*section 1*/
 #information {
   background-color: #f6f6f6;
@@ -219,5 +242,97 @@ body {
 }
 
 /*Page_1*/
+.img_resto {
+  position: relative;
+}
+.img_resto img {
+  width: 375px;
+  height: 253px;
+}
+
+main {
+  border-radius: 38px 38px 0px 0px;
+  position: relative;
+  top: -86px;
+  background-color: #F6F6F6;
+  padding-right: 14px;
+  padding-left: 14px;
+  padding-bottom: 54px;
+  margin-bottom: -85px;
+}
+main h1 {
+  font-family: "Shrikhand";
+  font-weight: 100;
+  padding-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bloc {
+  margin-bottom: 20px;
+}
+.bloc h2 {
+  color: #353535;
+  font-size: 1rem;
+  font-weight: 400;
+  border-bottom: 3px solid #99e2d0;
+  width: 11%;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.list .list__plat {
+  background-color: white;
+  margin-bottom: 15px;
+  width: 100%;
+  border-radius: 15px;
+  padding-right: 5px;
+  padding-left: 5px;
+  box-shadow: 0px 1px 6px lightgrey;
+}
+.list .list__plat .titre {
+  padding-left: 10px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-top: 5px;
+}
+.list .list__plat .details {
+  margin-top: -26px;
+  margin-bottom: -8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.list .list__plat .details P {
+  color: #353535;
+}
+.list .list__plat .details .prix {
+  font-weight: 700;
+}
+.list .list__animation {
+  background-color: green;
+  width: 0%;
+  height: 25px;
+}
+
+.commander .btn {
+  display: block;
+  margin: auto;
+  border-radius: 25px;
+  border: none;
+  color: white;
+  font-weight: 600;
+  background-image: linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  padding: 15px;
+  width: 60%;
+  font-size: 1rem;
+}
 
 /*# sourceMappingURL=style.css.map */
