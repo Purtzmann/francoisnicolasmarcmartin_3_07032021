@@ -4,6 +4,7 @@
 @import "layouts/footer.scss";
 @import "layouts/header.scss";
 @import "utils/keyframes.scss";
+@import "utils/function.scss";
 
 p, h1, h2, h3{
    font-family: 'Roboto';
@@ -62,6 +63,10 @@ header{
       .btn{
          @include btn;
          margin-bottom: 56px;
+         transition: transform 400ms;
+         &:hover{
+            transform: scale(1.05);
+         }
       }
    }
 
@@ -240,6 +245,15 @@ main{
    }
 }
 
+.list__plat{
+   animation: plat $anim-dur backwards;
+      @for $i from 1 to 4 {
+         &--#{$i}{
+            animation-delay: $anim-delay * $i;
+         }
+      }
+}
+
 .list{
    display: flex;
    flex-direction: row;
@@ -254,6 +268,7 @@ main{
       padding-right:5px ;
       padding-left: 5px;
       box-shadow: 0px 1px 6px lightgrey;
+      
       .titre{
          padding-left: 10px;
          font-weight: 700;

@@ -42,14 +42,25 @@ header .arrow .fas.fa-arrow-left {
   color: #353535;
 }
 
-@keyframes box {
+@keyframes plat {
   from {
-    transform: translateX(72px);
+    transform: translateY(15px);
+    opacity: 0;
   }
   to {
-    transform: translateX(0);
+    transform: translateY(0);
+    opacity: 1;
   }
 }
+/*.list__plat--1 {
+   animation: plat 1.2s;
+}
+.list__plat--2 {
+   animation: plat 1.8s;
+}
+.list__plat--3 {
+   animation: plat 2s;
+}*/
 p, h1, h2, h3 {
   font-family: "Roboto";
 }
@@ -113,6 +124,10 @@ header .arrow {
   background-image: linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
   padding: 15px;
   margin-bottom: 56px;
+  transition: transform 400ms;
+}
+#information .information__info .btn:hover {
+  transform: scale(1.05);
 }
 
 /*section 2*/
@@ -278,6 +293,19 @@ main h1 {
   font-weight: 400;
   border-bottom: 3px solid #99e2d0;
   width: 11%;
+}
+
+.list__plat {
+  animation: plat 1.5s backwards;
+}
+.list__plat--1 {
+  animation-delay: 0.5s;
+}
+.list__plat--2 {
+  animation-delay: 1s;
+}
+.list__plat--3 {
+  animation-delay: 1.5s;
 }
 
 .list {

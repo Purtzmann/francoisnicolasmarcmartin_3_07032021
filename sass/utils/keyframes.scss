@@ -1,8 +1,10 @@
-@keyframes box {
+@keyframes plat{
    from {
-      transform: translateX(72px);
+      transform: translateY(15px) ;
+      opacity:0;
    }
    to {
-      transform: translateX(0);
+      transform: translateY(0) ;
+      opacity:1;
    }
 }
