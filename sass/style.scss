@@ -22,7 +22,7 @@ body{
 
 /*Home_Page*/
 
-header{
+#header_home{
    .arrow{
       display: none;
    }
@@ -96,7 +96,7 @@ header{
                margin-bottom: 15px;
                p{
                   position: relative;
-                  left: -22px;
+                  left: -23px;
                   font-weight: 700;
                   span{
                      background-color: $primary-color;
@@ -202,15 +202,14 @@ header{
 } 
 
 
-/*Page_1*/
+/*Page*/
 
 
 
 .img_resto{
    position: relative;
    img{
-      width: 375px;
-      height: 253px;
+      width: 100%;
    }
 }
 
@@ -256,11 +255,11 @@ main{
 
 .list{
    display: flex;
-   flex-direction: row;
-   justify-content: center;
-   align-items: center;
-   
+   flex-direction: row;x
    .list__plat{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
       background-color: white;
       margin-bottom: 15px;
       width: 100%;
@@ -268,41 +267,89 @@ main{
       padding-right:5px ;
       padding-left: 5px;
       box-shadow: 0px 1px 6px lightgrey;
-      
-      .titre{
-         padding-left: 10px;
-         font-weight: 700;
-         font-size: 1.1rem;
-         margin-top: 5px;
-      }
-      .details{
-         margin-top: -26px;
-         margin-bottom: -8px;
-         padding-left: 10px;
-         padding-right: 10px;
-         display: flex;
-         flex-direction: row;
-         justify-content: space-between;
-         P{
-            color: #353535;
-         }
-         .prix{
+      transition:margin-right 2s;
+      .info{
+         width: 100%;
+         margin-top: -8px;
+         .titre{
+            padding-left: 10px;
             font-weight: 700;
+            font-size: 1.1rem;
          }
+         .details{
+            margin-top: -26px;
+            margin-bottom: -8px;
+            padding-left: 10px;
+            padding-right: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            P{
+               color: #353535;
+               
+            }
+            .prix{
+               font-weight: 700;
+            }
+         }  
       }
    }
-   .list__animation{
-      background-color: green;
+
+   .animation{
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 0%;
-      height: 25px;
+      margin-right: -5px;
+      background: #99e2d0;
+      border-radius: 0px 15px 15px 0px;
+      transition-duration: 1s;
+      .fas{
+         opacity: 0;
+         transition: opacity 400ms ease-in;
+         
       }
+      .fas.fa-check-circle{
+         color: white;
+         font-size:25px;
+         
+         
+         
+      }
+   }
+}
+
+
+.info:hover + .animation{
+   width: 25%;
+   transform-origin: 50% right;
+   .fas{
+      opacity: 1;
+      animation: rotation 400ms linear;
+   }
+   
 }
 
 .commander{
-
+   margin-top: 40px;
    .btn{
       @include btn;
       width: 60%;
       font-size: 1rem;
    }
 }
+
+
+#example-element{
+   background-color:#e4f0f5;
+   color:#000;padding:1rem;
+   border-radius:.5rem;
+   font:1em monospace;
+   width:100%;
+   transition:margin-right 2s;
+}
+   #default-example:hover>#example-element{
+      background-color:#909;
+      color:#fff;
+      margin-right:40%
+   }

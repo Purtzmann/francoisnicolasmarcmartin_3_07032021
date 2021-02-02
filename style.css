@@ -52,6 +52,14 @@ header .arrow .fas.fa-arrow-left {
     opacity: 1;
   }
 }
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /*.list__plat--1 {
    animation: plat 1.2s;
 }
@@ -76,7 +84,7 @@ body {
 }
 
 /*Home_Page*/
-header .arrow {
+#header_home .arrow {
   display: none;
 }
 
@@ -123,6 +131,7 @@ header .arrow {
   font-weight: 600;
   background-image: linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
   padding: 15px;
+  outline-style: none;
   margin-bottom: 56px;
   transition: transform 400ms;
 }
@@ -160,7 +169,7 @@ header .arrow {
 }
 #working .working__list ul .list p {
   position: relative;
-  left: -22px;
+  left: -23px;
   font-weight: 700;
 }
 #working .working__list ul .list p span {
@@ -256,13 +265,12 @@ header .arrow {
   display: none;
 }
 
-/*Page_1*/
+/*Page*/
 .img_resto {
   position: relative;
 }
 .img_resto img {
-  width: 375px;
-  height: 253px;
+  width: 100%;
 }
 
 main {
@@ -311,10 +319,11 @@ main h1 {
 .list {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
 }
-.list .list__plat {
+.list x .list__plat {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   background-color: white;
   margin-bottom: 15px;
   width: 100%;
@@ -322,14 +331,18 @@ main h1 {
   padding-right: 5px;
   padding-left: 5px;
   box-shadow: 0px 1px 6px lightgrey;
+  transition: margin-right 2s;
 }
-.list .list__plat .titre {
+.list x .list__plat .info {
+  width: 100%;
+  margin-top: -8px;
+}
+.list x .list__plat .info .titre {
   padding-left: 10px;
   font-weight: 700;
   font-size: 1.1rem;
-  margin-top: 5px;
 }
-.list .list__plat .details {
+.list x .list__plat .info .details {
   margin-top: -26px;
   margin-bottom: -8px;
   padding-left: 10px;
@@ -338,18 +351,43 @@ main h1 {
   flex-direction: row;
   justify-content: space-between;
 }
-.list .list__plat .details P {
+.list x .list__plat .info .details P {
   color: #353535;
 }
-.list .list__plat .details .prix {
+.list x .list__plat .info .details .prix {
   font-weight: 700;
 }
-.list .list__animation {
-  background-color: green;
+.list .animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 0%;
-  height: 25px;
+  margin-right: -5px;
+  background: #99e2d0;
+  border-radius: 0px 15px 15px 0px;
+  transition-duration: 1s;
+}
+.list .animation .fas {
+  opacity: 0;
+  transition: opacity 400ms ease-in;
+}
+.list .animation .fas.fa-check-circle {
+  color: white;
+  font-size: 25px;
 }
 
+.info:hover + .animation {
+  width: 25%;
+  transform-origin: 50% right;
+}
+.info:hover + .animation .fas {
+  opacity: 1;
+  animation: rotation 400ms linear;
+}
+
+.commander {
+  margin-top: 40px;
+}
 .commander .btn {
   display: block;
   margin: auto;
@@ -359,8 +397,25 @@ main h1 {
   font-weight: 600;
   background-image: linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
   padding: 15px;
+  outline-style: none;
   width: 60%;
   font-size: 1rem;
+}
+
+#example-element {
+  background-color: #e4f0f5;
+  color: #000;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font: 1em monospace;
+  width: 100%;
+  transition: margin-right 2s;
+}
+
+#default-example:hover > #example-element {
+  background-color: #909;
+  color: #fff;
+  margin-right: 40%;
 }
 
 /*# sourceMappingURL=style.css.map */
