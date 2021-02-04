@@ -24,6 +24,8 @@ header {
   height: 63px;
   background-color: white;
   height: 63px;
+  position: relative;
+  z-index: 1;
 }
 header .logo {
   margin-top: 10px;
@@ -78,6 +80,12 @@ header .arrow .fas.fa-arrow-left {
     opacity: 1;
   }
 }
+@keyframes background {
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
 /*.list__plat--1 {
    animation: plat 1.2s;
 }
@@ -92,9 +100,12 @@ p, h1, h2, h3 {
 }
 
 body {
-  max-width: 375px;
   margin: auto;
-  animation: body 3.5s;
+}
+@media screen and (min-width: 1440px) {
+  body {
+    width: 1440px;
+  }
 }
 
 .links {
@@ -104,9 +115,18 @@ body {
 
 /*lds-ring*/
 .lds {
-  margin: auto;
-  position: relative;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  animation: background 2s;
+  animation-delay: 1.75s;
+  animation-fill-mode: both;
+  z-index: 10000;
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 
@@ -127,11 +147,11 @@ body {
   width: 64px;
   height: 64px;
   margin: 8px;
-  border: 8px solid #fff;
+  border: 8px solid #9356DC;
   border-radius: 50%;
   animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) 2;
-  border-color: #fff transparent transparent transparent;
-  background-color: black;
+  border-color: #9356DC transparent transparent transparent;
+  background-color: transparent;
 }
 
 .lds-ring div:nth-child(1) {
@@ -158,7 +178,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 10px;
+  padding-bottom: 45px;
 }
 #information .information__geoloc {
   background-color: #eaeaea;
@@ -239,6 +259,11 @@ body {
   padding: 0px 0px 0px 5px;
   width: 80%;
 }
+@media screen and (min-width: 1024px) {
+  #working .working__list ul {
+    width: 50%;
+  }
+}
 #working .working__list ul .list {
   padding: 10px;
   background-color: #F6F6F6;
@@ -286,12 +311,24 @@ body {
   justify-content: center;
   align-items: center;
 }
+@media screen and (min-width: 768px) {
+  #restaurant .restaurants {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
 
 #restaurant .figure {
   height: 253px;
   background-color: white;
   border-radius: 25px;
   margin-bottom: 15px;
+}
+@media screen and (min-width: 768px) {
+  #restaurant .figure {
+    margin: 5px;
+  }
 }
 #restaurant .figure .figure__image {
   position: relative;
@@ -300,6 +337,7 @@ body {
   width: 337px;
   height: 176px;
   border-radius: 20px 20px 0px 0px;
+  object-fit: cover;
 }
 #restaurant .figure .figure__image .new {
   position: absolute;
@@ -329,16 +367,12 @@ body {
 #restaurant .figure .figure__figcaption .favoris p .far {
   position: absolute;
   right: 12px;
-  z-index: 1;
-  background-color: white;
-}
-#restaurant .figure .figure__figcaption .favoris p .fas {
-  position: absolute;
-  right: 12px;
-  color: pink;
 }
 #restaurant .figure .figure__figcaption .favoris p .far:hover {
-  z-index: -1;
+  font-weight: bold;
+  background: linear-gradient(0deg, #a671e4 0%, #ffa1e5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 #restaurant .figure--old .new {
   display: none;
@@ -346,7 +380,7 @@ body {
 
 /*Page*/
 .img_resto {
-  position: relative;
+  bottom: 330px;
 }
 .img_resto img {
   width: 100%;
@@ -362,7 +396,18 @@ main {
   padding-bottom: 54px;
   margin-bottom: -85px;
 }
-main h1 {
+@media screen and (min-width: 768px) {
+  main {
+    top: -300px;
+    margin-bottom: -312px;
+  }
+}
+main .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+main .title h1 {
   font-family: "Shrikhand";
   font-weight: 100;
   padding-top: 25px;
@@ -370,16 +415,44 @@ main h1 {
   justify-content: space-between;
   align-items: center;
 }
+main .title .far {
+  right: 29px;
+  bottom: 9px;
+  font-size: 2rem;
+  background-color: transparent;
+  position: relative;
+  top: 0px;
+}
+main .title .far:hover {
+  font-weight: bold;
+  background: linear-gradient(0deg, #a671e4 0%, #ffa1e5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
-.bloc {
+.container {
   margin-bottom: 20px;
 }
-.bloc h2 {
-  color: #353535;
-  font-size: 1rem;
-  font-weight: 400;
-  border-bottom: 3px solid #99e2d0;
-  width: 11%;
+@media screen and (min-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 768px) {
+  .container .bloc {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container .bloc h2 {
+    color: #353535;
+    font-size: 1rem;
+    font-weight: 400;
+    border-bottom: 3px solid #99e2d0;
+    width: 11%;
+  }
 }
 
 .menu__plat {
@@ -433,6 +506,11 @@ main h1 {
 .menu .menu__plat .info .details P {
   color: #353535;
 }
+.menu .menu__plat .info .details .sous_titre {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .menu .menu__plat .info .details .prix {
   font-weight: 700;
 }
@@ -479,6 +557,8 @@ main h1 {
   outline-style: none;
   box-shadow: 0px 3px 10px lightgrey;
   transition: box-shadow 400ms ease-in-out;
+  padding-left: 40px;
+  padding-right: 40px;
   position: relative;
   z-index: 1;
 }
@@ -498,22 +578,6 @@ main h1 {
   opacity: 0;
   z-index: -1;
   transition: opacity 250ms;
-}
-
-#example-element {
-  background-color: #e4f0f5;
-  color: #000;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  font: 1em monospace;
-  width: 100%;
-  transition: margin-right 2s;
-}
-
-#default-example:hover > #example-element {
-  background-color: #909;
-  color: #fff;
-  margin-right: 40%;
 }
 
 /*# sourceMappingURL=style.css.map */

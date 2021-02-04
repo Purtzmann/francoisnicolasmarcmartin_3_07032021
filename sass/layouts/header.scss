@@ -7,6 +7,8 @@ header{
    height: 63px;
    background-color: white;
    height: 63px;
+   position: relative;
+   z-index: 1;
    .logo{
       margin-top: 10px;
       img{

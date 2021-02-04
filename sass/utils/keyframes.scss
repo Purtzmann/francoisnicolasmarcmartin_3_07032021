@@ -41,3 +41,10 @@
        opacity: 1;
    }
 }
+
+@keyframes background {
+   100% {
+     opacity: 0;
+     z-index: -10;
+   }
+ } 
