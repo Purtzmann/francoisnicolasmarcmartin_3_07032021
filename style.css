@@ -362,6 +362,7 @@ body {
 #restaurant .figure .figure__figcaption .favoris p {
   display: block;
   cursor: pointer;
+  font-size: 1.4rem;
 }
 #restaurant .figure .figure__figcaption .favoris p .far {
   position: absolute;
