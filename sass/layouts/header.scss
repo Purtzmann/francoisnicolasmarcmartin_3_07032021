@@ -10,17 +10,19 @@ header{
    position: relative;
    z-index: 1;
    .logo{
-      margin-top: 10px;
+      width: 70%;
+      justify-content: center;
+      display: flex;
       img{
          width: 166px;
          height: 31px;
       }
    }
    .arrow{
-      margin-left: -17%;
-      margin-right: 14%;
-      margin-top: 2%;
-      font-size: 18px;
+      width: 0%;
+      font-size: 1.5rem;
+      display: flex;
+      justify-content: center;;
       
       .fas.fa-arrow-left{
          color: #353535;

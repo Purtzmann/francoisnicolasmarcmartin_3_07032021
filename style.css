@@ -28,17 +28,19 @@ header {
   z-index: 1;
 }
 header .logo {
-  margin-top: 10px;
+  width: 70%;
+  justify-content: center;
+  display: flex;
 }
 header .logo img {
   width: 166px;
   height: 31px;
 }
 header .arrow {
-  margin-left: -17%;
-  margin-right: 14%;
-  margin-top: 2%;
-  font-size: 18px;
+  width: 0%;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
 }
 header .arrow .fas.fa-arrow-left {
   color: #353535;
@@ -131,13 +133,10 @@ body {
 }
 
 .lds-ring {
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  margin: auto;
-  margin-top: 200px;
-  animation: lds-ring 1.5s ease-in-out 2;
-  opacity: 0;
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
 }
 
 .lds-ring div {
@@ -389,18 +388,12 @@ body {
 main {
   border-radius: 38px 38px 0px 0px;
   position: relative;
-  top: -86px;
+  top: -43px;
   background-color: #F6F6F6;
   padding-right: 14px;
   padding-left: 14px;
-  padding-bottom: 54px;
-  margin-bottom: -85px;
-}
-@media screen and (min-width: 768px) {
-  main {
-    top: -300px;
-    margin-bottom: -312px;
-  }
+  padding-bottom: 35px;
+  margin-bottom: -66px;
 }
 main .title {
   display: flex;
@@ -478,7 +471,7 @@ main .title .far:hover {
   justify-content: space-between;
   background-color: white;
   margin-bottom: 15px;
-  width: 100%;
+  width: 97%;
   border-radius: 15px;
   padding-right: 5px;
   padding-left: 5px;
@@ -488,6 +481,9 @@ main .title .far:hover {
 .menu .menu__plat .info {
   width: 100%;
   margin-top: -8px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .menu .menu__plat .info .titre {
   padding-left: 10px;
