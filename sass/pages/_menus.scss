@@ -1,0 +1,203 @@
+/*Page*/
+.links{
+   text-decoration: none;
+   color: black;
+}
+
+
+.img_resto{
+   bottom: 330px;
+   img{
+      width: 100%;
+   }
+}
+
+.menus{
+   border-radius: 38px 38px 0px 0px;
+   position: relative;
+   top: -43px;
+   background-color: #F6F6F6;
+   padding-right: 14px;
+   padding-left: 14px;
+   padding-bottom: 35px;
+   margin-bottom: -66px;
+   
+   &__header {
+      padding: 1rem 2rem 0 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+   
+   &__title {
+      font-family: "Shrikhand";
+   }
+   
+   &__btn {
+      height: 2rem;
+      width: 2rem;
+      border: transparent 0px solid;
+      padding: 0;
+      cursor: pointer;
+      position: relative;
+      background-color: black;
+      
+      &:hover::before {
+         opacity: 1;
+      }
+      
+      &::before {
+         opacity: 0;
+         transition: 0.5s;
+         content: "";
+         position: absolute;
+         top: 0;
+         left: 0;
+         height: 100%;
+         width: 100%;
+         background:linear-gradient(0deg, $primary-color 0%, $secondary-color 100%);
+      }
+   }
+   
+   &__fav {
+      transition-duration: .25s;
+      background-color: #f6f6f6;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      mix-blend-mode: lighten;
+   }
+   
+   
+   &__btn:hover {
+      .menus__fav {
+         &--nobackground {
+         opacity: 0;
+         }
+      }
+   }
+}
+
+.menus__container{
+   margin-bottom: 20px;
+   @media screen and (min-width: 768px){
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      .bloc{
+         @media screen and (min-width: 768px){
+            width: 30%;
+      }
+      h2{
+         color: #353535;
+         font-size: 1rem;
+         font-weight: 400;
+         border-bottom: 3px solid #99e2d0;
+         width: 11%;
+      }
+   }
+}
+}
+
+
+
+.menu__plat{
+   animation: plat $anim-dur backwards;
+   @for $i from 1 through 4 {
+      &--#{$i}{
+         animation-delay: $anim-delay * $i;
+      }
+   }
+}
+
+.menu{
+   display: flex;
+   flex-direction: row;
+   .menu__plat{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      background-color: white;
+      margin-bottom: 15px;
+      width: 97%;
+      border-radius: 15px;
+      padding-right:5px ;
+      padding-left: 5px;
+      box-shadow: 0px 1px 6px lightgrey;
+      transition:margin-right 2s;
+      .info{
+         width: 100%;
+         margin-top: -8px;
+         white-space: nowrap;
+         text-overflow: ellipsis;
+         overflow: hidden;
+         .titre{
+            padding-left: 10px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            
+         }
+         .details{
+            margin-top: -26px;
+            margin-bottom: -8px;
+            padding-left: 10px;
+            padding-right: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            P{
+               color: #353535;
+            }
+            .sous_titre{
+               white-space: nowrap;
+               overflow: hidden;
+               text-overflow: ellipsis;
+            }
+            .prix{
+               font-weight: 700;
+            }
+         }  
+      }
+   }
+
+   .animation{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 0%;
+      margin-right: -5px;
+      background: #99e2d0;
+      border-radius: 0px 15px 15px 0px;
+      transition-duration: 1s;
+      .fas{
+         opacity: 0;
+         transition: opacity 400ms ease-in;
+         
+      }
+      .fas.fa-check-circle{
+         color: white;
+         font-size:25px;
+      }
+   }
+}
+
+
+.info:hover + .animation{
+   width: 25%;
+   transform-origin: 50% right;
+   .fas{
+      opacity: 1;
+      animation: rotation 400ms linear;
+   }
+   
+}
+
+.commander{
+   margin-top: 40px;
+   
+}
