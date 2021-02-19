@@ -354,11 +354,11 @@ main{
 
 .menu__plat{
    animation: plat $anim-dur backwards;
-      @for $i from 1 to 4 {
-         &--#{$i}{
-            animation-delay: $anim-delay * $i;
-         }
+   @for $i from 1 through 4 {
+      &--#{$i}{
+         animation-delay: $anim-delay * $i;
       }
+   }
 }
 
 .menu{
