@@ -1,0 +1,29 @@
+.commande{
+   display: flex;
+   justify-content: center;
+   text-align: center;
+   &__information{
+      margin-top: 400px;
+      margin-bottom: 400px;
+      h1{
+         font-size: 3rem;
+         font-weight: 900;
+         color: #131921;
+      }
+      p{
+         font-size: 1.5rem;
+         font-weight: 400;
+         color: #485769;
+         margin-bottom: 200px;
+      }
+      a{
+         font-size: 1.5rem;
+         font-weight: 400;
+         border: 1px solid #131921;
+         box-shadow: 0px 0px 9px 2px #bababa;
+         border-radius: 15px;
+         padding: 8px;
+
+      }
+   }
+}

@@ -1,0 +1,7 @@
+const localStore = new LocalStorageHelper()
+const fetchFunction2 = new FetchHelper2()
+const displayArticleHeader = new DisplayArticleHeader()
+const additionId = new IdDataset()
+const formulaireTotalPriceFunction = new FormulaireTotalPriceMaj()
+const buttonPanier = new ButtonPanier()
+const validationCommande = new ValidationCommande()
